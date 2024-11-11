@@ -20,10 +20,16 @@ for dir_name in dirs:
 
 print(new_dir_path)
 
+baseline_header = f'''"""{arg}.
+
+"""
+
+'''
+
 try:
     os.mkdir(new_dir_path)
     with open(os.path.join(new_dir_path, "main.py"), "w", encoding="utf-8") as f:
-        f.write('"""\n\n"""\n\n')
+        f.write(baseline_header)
 except:
     print("Failed to create new example!")
     sys.exit(1)
