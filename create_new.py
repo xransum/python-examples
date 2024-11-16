@@ -5,7 +5,7 @@ import os
 import re
 from glob import glob
 
-DIR_REGEX = r"^[0-9]+_"
+DIR_REGEX = r"^[0-9]+_.*$"
 SECTIONS_REGEX = r"section_[a-z]"
 
 root = os.path.dirname(os.path.abspath(__file__))
@@ -24,10 +24,10 @@ section_dir = os.path.join(
     root,
     section_name,
 )
-dirs = [
-    d for d in os.listdir(section_dir) if (
-        os.path.isdir(d) and re.search(DIR_REGEX, d) is not None)
-]
+
+dirs = [d for d in glob(
+os.path.join(section_dir, "*")) if os.path.isdir(d) and re.search(DIR_REGEX, os.path.basename(d)) is not None]
+
 sample_title = input("Title Name: ").strip()
 new_dir_name = "_".join(
     re.findall(r"\w+", sample_title.strip().lower()),
@@ -58,6 +58,7 @@ try:
 except:
     print("Failed to create new example!")
     sys.exit(1)
+
 
 # Clean exit
 sys.exit(0)
