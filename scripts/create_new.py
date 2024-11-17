@@ -8,18 +8,22 @@ from glob import glob
 DIR_REGEX = r"^[0-9]+_.*$"
 SECTIONS_REGEX = r"section_[a-z]"
 
-root = os.path.dirname(os.path.abspath(__file__))
+root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 sections_names = sorted([d for d in os.listdir(root) if re.search(SECTIONS_REGEX, d) is not None])
 
 print("Section select -")
 for i in range(len(sections_names)):
     section_name = sections_names[i]
-    print(f"{i + 1}. {section_name}")
+    _, letter = section_name.split("_")
+    print(f"{letter.upper()}. {section_name}")
 
-section_name = sections_names[
-    int(input("Selection: ").strip()) - 1
-]
+
+section_name = f'section_{input("Selection: ").strip().lower()}'
+if section_name not in sections_names:
+    print(f"Section '{section_name}' is invalid.")
+    sys.exit(1)
+
 section_dir = os.path.join(
     root,
     section_name,
