@@ -6,8 +6,8 @@
 ## Table of Contents
 - [About](#about)
 - [Installation](#installation)
-- [Sources](#sources)
 - [Sections](#sections)
+- [Sources](#sources)
 - [Maintainers](#maintainers)
 - [Links](#links)
 
