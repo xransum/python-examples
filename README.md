@@ -105,8 +105,8 @@ Ensure you have the necessary dependencies installed for each example. Each exam
 - Section B:
   - [Practice Python Exercises and Challenges with Solutions](https://pynative.com/python-exercises-with-solutions/)
 - Section C:
-  - [Python Basic (Part -I)](https://www.w3resource.com/python-exercises/python-basic-exercises.php)
-  - [Python Basic (Part -II)](https://www.w3resource.com/python-exercises/basic/)
+  - [Python Basic (Part I)](https://www.w3resource.com/python-exercises/python-basic-exercises.php)
+  - [Python Basic (Part II)](https://www.w3resource.com/python-exercises/basic/)
   - [Python Programming Puzzles](https://www.w3resource.com/python-exercises/puzzles/index.php)
   - [Mastering Python](https://www.w3resource.com/python-exercises/python_100_exercises_with_solutions.php)
   - [Python Advanced](https://www.w3resource.com/python-exercises/advanced/index.php)
